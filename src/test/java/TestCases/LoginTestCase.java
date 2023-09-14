@@ -14,6 +14,7 @@ import Resources.Constants;
 
 public class LoginTestCase extends BaseClass {
 
+	//added one line for git demo purpose
 	@Test(priority = 0)
 
 	public void verifyingValidLogin() throws IOException, InterruptedException {

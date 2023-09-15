@@ -18,12 +18,16 @@ public class LoginTestCase extends BaseClass {
 	@Test(priority = 0)
 
 	public void verifyingValidLogin() throws IOException, InterruptedException {
+		
+		
 		 initializeDriver();
 		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-		Thread.sleep(2000);
+		
 
 		LoginPage obj = new LoginPage(driver);
+		
+		CommonMethod.expwait(driver, obj.EnterUserName(),10);
 		obj.EnterUserName().sendKeys(Constants.EnterUserName);
 		obj.EnterPassword().sendKeys(Constants.EnterPassword);
 		obj.Clickonlogin().click();
@@ -35,15 +39,16 @@ public class LoginTestCase extends BaseClass {
 	}
 
 	public void verifyinvalidlogin() throws IOException, InterruptedException {
-		// initializeDriver();
-		// driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		Thread.sleep(2000);
+		initializeDriver();
+		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		
 
 		LoginPage obj = new LoginPage(driver);
 		obj.EnterUserName().sendKeys(Constants.InvalidUserName);
 		obj.EnterPassword().sendKeys(Constants.invalidpassword);
 		obj.Clickonlogin().click();
-		Thread.sleep(2000);
+		
+		CommonMethod.expwait(driver, obj.ExpectedErrortext(),10);
 		
 		CommonMethod.handlesoftassert(obj.ExpectedErrortext().getText(),Constants.InvalidExpectedErrortext);
 

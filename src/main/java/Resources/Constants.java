@@ -10,5 +10,15 @@ public class Constants {
 	public static String invalidpassword="sd234d";
 	public static String InvalidExpectedErrortext="Invalid credentials";
 	
+//AdminPageObject Page
+	
+	public static String Expected_DashboardText = "Dashboard";
+	public static String Expected_UserManagement = "User Management";
+	public static String Expected_UserText = "Users";
+	public static String UserName_TextField = "Admin";
+	public static String Choose_UserRole = "Admin";
+	public static String EmployeeName_TextField = "";
+	public static String Choose_Status_Dropdown = "Enabled";
+	
 
 }

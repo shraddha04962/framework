@@ -45,4 +45,40 @@ public class CommonMethod {
 		wait.until(ExpectedConditions.elementToBeClickable(xpath));
 		
 	   }
-}
+	    
+	    
+	    public static void HandleAssertionForVisibiltyOfElement(WebElement element) { 
+	    	 
+	    	  SoftAssert softAssert = new SoftAssert(); 
+	    	 
+	    	  softAssert.assertTrue(true); 
+	    	  softAssert.assertAll(); 
+	    	 
+	    	 } 
+	    	 
+	    	 public static void waitForElementToVisible(By Xpath, WebDriver driver, int timeout) { 
+	    	 
+	    	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout)); 
+	    	 
+	    	  wait.until(ExpectedConditions.visibilityOfElementLocated(Xpath)); 
+	    	 
+	    	 } 
+	    	 
+	    	 public static void setText(WebElement element, String input) { 
+	    	 
+	    	  element.sendKeys(input); 
+	    	 } 
+	    	 
+	    	 public static void clickOnElement(WebElement element) { 
+	    	 
+	    	  element.click(); 
+	    	 } 
+	    	 
+	    	 public static boolean isElementDisplayed(WebElement element) { 
+	    	 
+	    	  return element.isDisplayed(); 
+	    	 } 
+	    	 
+	    	}
+
+

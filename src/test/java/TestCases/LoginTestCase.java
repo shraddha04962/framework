@@ -14,14 +14,14 @@ import Resources.Constants;
 
 public class LoginTestCase extends BaseClass {
 
-	//added one line for git demo purpose
+	
 	@Test(priority = 0)
 
 	public void verifyingValidLogin() throws IOException, InterruptedException {
 		
 		
-		 initializeDriver();
-		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		 //initializeDriver();
+		 //driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		
 

@@ -40,7 +40,7 @@ public class CommonMethod {
 	
 	 }
 	 
-	   public static void expwait(WebDriver driver,WebElement xpath,int timeout) {
+	    public  static void expwait(WebDriver driver,WebElement xpath,int timeout) {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(timeout));
 		wait.until(ExpectedConditions.elementToBeClickable(xpath));
 		

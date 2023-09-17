@@ -37,10 +37,9 @@ public class LoginTestCase extends BaseClass {
 
 		
 	}
-
+      @Test
 	public void verifyinvalidlogin() throws IOException, InterruptedException {
-		initializeDriver();
-		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		
 		
 
 		LoginPage obj = new LoginPage(driver);

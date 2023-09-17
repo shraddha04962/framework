@@ -20,7 +20,7 @@ public class LoginPage {
 	private By login =    By.xpath("//button[@type='submit']");
 	
 	 private By ActualPageText=By.xpath("//h6[text()='Dashboard']");
-	 private By ExpectedErrorText=By.xpath("//p[text()='Invalid credentials']");
+	 private By ExpectedErrorText =By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']");
 	
 	public WebElement EnterUserName() {
 	return driver.findElement(UserName);
@@ -40,7 +40,7 @@ public class LoginPage {
 	return driver.findElement(ActualPageText);
 	}
 	
-	public WebElement ExpectedErrortext() {
+	public WebElement Errortext() {
 	return driver.findElement(ExpectedErrorText);
 	}
 	

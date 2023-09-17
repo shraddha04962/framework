@@ -16,7 +16,7 @@ public class BaseClass {
 
 	public WebDriver driver;
 
-	Properties prop;
+	 public Properties prop;
 
 	public void initializeDriver() throws IOException {
 
@@ -51,8 +51,5 @@ public class BaseClass {
 
 	}
 
-	@AfterMethod
-	public void QuiteBrowser() {
-		driver.quit();
-	}
+	
 }

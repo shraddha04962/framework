@@ -3,9 +3,9 @@ package TestCases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
+
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+
 
 import PageObjectModel.LoginPage;
 import Resources.BaseClass;
@@ -24,12 +24,14 @@ public class LoginTestCase extends BaseClass {
 		 //driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		
-
+        Thread.sleep(2000);
 		LoginPage obj = new LoginPage(driver);
 		
-		CommonMethod.expwait(driver, obj.EnterUserName(),10);
+		
 		obj.EnterUserName().sendKeys(Constants.EnterUserName);
+		Thread.sleep(2000);
 		obj.EnterPassword().sendKeys(Constants.EnterPassword);
+		Thread.sleep(2000);
 		obj.Clickonlogin().click();
 		Thread.sleep(2000);
 		
@@ -41,15 +43,17 @@ public class LoginTestCase extends BaseClass {
 	public void verifyinvalidlogin() throws IOException, InterruptedException {
 		
 		
-
+        Thread.sleep(2000);
 		LoginPage obj = new LoginPage(driver);
 		obj.EnterUserName().sendKeys(Constants.InvalidUserName);
+		Thread.sleep(2000);
 		obj.EnterPassword().sendKeys(Constants.invalidpassword);
+		Thread.sleep(2000);
 		obj.Clickonlogin().click();
 		
-		CommonMethod.expwait(driver, obj.ExpectedErrortext(),10);
 		
-		CommonMethod.handlesoftassert(obj.ExpectedErrortext().getText(),Constants.InvalidExpectedErrortext);
+		Thread.sleep(2000);
+		CommonMethod.handlesoftassert(obj.Errortext().getText(),Constants.InvalidExpectedErrortext);
 
 		
 	}
